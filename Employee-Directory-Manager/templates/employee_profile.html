@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Profile</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F7F5F2;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .profile-card {
+            max-width: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #EEEAE5;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .header {
+            text-align: center;
+            background-color: #292827;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .employee-id {
+            font-size: 18px;
+            color: #FFD180;
+        }
+
+        .info {
+            padding: 10px 0;
+            border-bottom: 1px solid #EEEAE5;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .value {
+            color: #222;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 15px;
+            background-color: #E8F5E9;
+            color: #2E7D32;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            padding: 10px;
+            background-color: #E8F0FE;
+            color: #2563EB;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="profile-card">
+
+    <div class="header">
+        <h1>Employee Profile</h1>
+        <div class="employee-id">{{ emp_id }}</div>
+    </div>
+
+    <div class="info">
+        <span class="label">Name:</span>
+        <span class="value">{{ data[0] }}</span>
+    </div>
+
+    <div class="info">
+        <span class="label">Email:</span>
+        <span class="value">{{ data[1] }}</span>
+    </div>
+
+    <div class="info">
+        <span class="label">Phone:</span>
+        <span class="value">{{ data[2] }}</span>
+    </div>
+
+    <div class="info">
+        <span class="label">Birthdate:</span>
+        <span class="value">{{ data[3] }}</span>
+    </div>
+
+    <div class="info">
+        <span class="label">Gender:</span>
+        <span class="value">{{ data[4] }}</span>
+    </div>
+
+    <div class="info">
+        <span class="label">Job Role:</span>
+        <span class="value">{{ data[5] }}</span>
+    </div>
+
+    <div class="info">
+        <span class="label">Joining Date:</span>
+        <span class="value">{{ data[6] }}</span>
+    </div>
+
+    <div class="info">
+        <span class="label">Status:</span>
+        <span class="status">{{ data[7] }}</span>
+    </div>
+
+    <a href="/" class="back-btn">← Back to Employee Directory</a>
+
+</div>
+
+</body>
+</html>

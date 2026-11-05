@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Edit Employee</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #F7F5F2;
+            color: #333;
+        }
+
+        .container {
+            width: 600px;
+            max-width: 92%;
+            margin: 40px auto;
+        }
+
+        .box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+            border: 1px solid #EEEAE5;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #292827;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #D5D0CA;
+            border-radius: 6px;
+            font-size: 14px;
+            background-color: #FFFEFC;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #8FADEB;
+            box-shadow: 0 0 0 2px #E8F0FE;
+        }
+
+        input[readonly] {
+            background-color: #F1EFEC;
+            color: #777;
+        }
+
+
+        /* Update Button */
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 25px;
+            border: none;
+            border-radius: 6px;
+            background-color: #FFF3E0;
+            color: #E65100;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #FFE5C2;
+        }
+
+
+        /* Back Link */
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #2563EB;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .back:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <div class="box">
+
+            <h1>Edit Employee</h1>
+
+
+            <form method="POST">
+
+
+                <label>Employee ID:</label>
+
+                <input
+                    type="text"
+                    value="{{ emp_id }}"
+                    readonly
+                >
+
+
+                <label>Name:</label>
+
+                <input
+                    type="text"
+                    name="name"
+                    value="{{ data[0] }}"
+                    required
+                >
+
+
+                <label>Email:</label>
+
+                <input
+                    type="email"
+                    name="email"
+                    value="{{ data[1] }}"
+                    required
+                >
+
+
+                <label>Phone:</label>
+
+                <input
+                    type="tel"
+                    name="phone"
+                    value="{{ data[2] }}"
+                    required
+                >
+
+
+                <label>Birthdate:</label>
+
+                <input
+                    type="date"
+                    name="birthdate"
+                    value="{{ data[3] }}"
+                    required
+                >
+
+
+                <label>Gender:</label>
+
+                <select name="gender" required>
+
+                    <option
+                        value="Male"
+                        {% if data[4] == "Male" %}selected{% endif %}
+                    >
+                        Male
+                    </option>
+
+                    <option
+                        value="Female"
+                        {% if data[4] == "Female" %}selected{% endif %}
+                    >
+                        Female
+                    </option>
+
+                    <option
+                        value="Other"
+                        {% if data[4] == "Other" %}selected{% endif %}
+                    >
+                        Other
+                    </option>
+
+                </select>
+
+
+                <label>Job Role:</label>
+
+                <input
+                    type="text"
+                    name="job_role"
+                    value="{{ data[5] }}"
+                    required
+                >
+
+
+                <label>Joining Date:</label>
+
+                <input
+                    type="date"
+                    name="joining_date"
+                    value="{{ data[6] }}"
+                    required
+                >
+
+
+                <label>Status:</label>
+
+                <select name="status" required>
+
+                    <option
+                        value="Active"
+                        {% if data[7] == "Active" %}selected{% endif %}
+                    >
+                        Active
+                    </option>
+
+                    <option
+                        value="Inactive"
+                        {% if data[7] == "Inactive" %}selected{% endif %}
+                    >
+                        Inactive
+                    </option>
+
+                </select>
+
+
+                <button type="submit">
+                    Update Employee
+                </button>
+
+            </form>
+
+
+            <a class="back" href="/">
+                ← Back to Employee List
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

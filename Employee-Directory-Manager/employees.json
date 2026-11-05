@@ -1,0 +1,32 @@
+{
+    "EMP001": [
+        "Raj",
+        "raj@gmail.com",
+        "9876543210",
+        "2003-05-12",
+        "Male",
+        "Software Developer",
+        "2025-07-01",
+        "Active"
+    ],
+    "EMP002": [
+        "Priya",
+        "priya@gmail.com",
+        "9876543211",
+        "2002-11-20",
+        "Female",
+        "Data Analyst",
+        "2024-08-15",
+        "Active"
+    ],
+    "EMP004": [
+        "vidhii",
+        "vidhii@gmail.com",
+        "3557677899",
+        "2004-07-07",
+        "Female",
+        "software developer",
+        "2004-05-01",
+        "Active"
+    ]
+}
